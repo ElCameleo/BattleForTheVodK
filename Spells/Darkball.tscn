@@ -1,0 +1,68 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Spells/Fireball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Images/Spells/dark_explosion.png" type="Texture" id=2]
+[ext_resource path="res://Spells/Darkball.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 514, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 1028, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 1542, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 2056, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 2570, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 3084, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 3598, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 4112, 0, 514, 258 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 4626, 0, 514, 258 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "play",
+"speed": 10.0
+} ]
+
+[node name="Darkball" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 0.109804, 0.192157, 0.482353, 1 )
+
+[node name="AnimatedSprite" parent="." index="2"]
+modulate = Color( 0.227451, 0.113725, 0.223529, 1 )
+frames = SubResource( 1 )
